@@ -1,0 +1,30 @@
+[
+  {
+    "id": "mod-a1",
+    "name": "Studio Box A",
+    "footprint_m2": 37,
+    "width_m": 5.0,
+    "depth_m": 7.4,
+    "module_floor_height_m": 3.0,
+    "max_stack_storeys": 3,
+    "unit_type": "studio",
+    "unit_area_m2": 37,
+    "parking_req_per_unit": 0.2,
+    "access_req": "lane",
+    "tags": ["stackable", "balcony-ready"]
+  },
+  {
+    "id": "mod-b1",
+    "name": "TwoBed Box B",
+    "footprint_m2": 55,
+    "width_m": 6.0,
+    "depth_m": 9.2,
+    "module_floor_height_m": 3.2,
+    "max_stack_storeys": 3,
+    "unit_type": "2bed",
+    "unit_area_m2": 55,
+    "parking_req_per_unit": 0.5,
+    "access_req": "lane",
+    "tags": ["stackable", "family-friendly"]
+  }
+]

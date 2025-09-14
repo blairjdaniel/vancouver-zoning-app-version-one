@@ -1,0 +1,32 @@
+name: Build Windows executable
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyinstaller==5.10.1 keyring
+
+      - name: Build Windows onefile
+        run: |
+          pyinstaller --noconfirm --onefile --add-data "backend\\build;build" --add-data "backend\\models;models" --icon build_icons/Arch.ico backend\\desktop_app.py
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-desktop-app
+          path: dist\desktop_app.exe

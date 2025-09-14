@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  vancouver-zoning-app:
+    container_name: vancouver-zoning-app
+    image: vancouver-zoning-app:latest
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8081:80"
+    env_file:
+      - .env
+    environment:
+      - FLASK_ENV=production
+      - PYTHONPATH=/app
+    volumes:
+      # Mount local data directories for development
+      - ./files:/app/files:ro
+      - ./processed:/app/processed:ro
+      - ./configs:/app/configs:ro
+    restart: unless-stopped
+    labels:
+      - "com.docker.compose.project=vancouver-zoning-app"
+      - "description=Vancouver Zoning Analysis Application - Access at http://localhost:8081"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:80/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Optional: Add a reverse proxy for production
+  traefik:
+    image: traefik:v2.10
+    command:
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
+    ports:
+      - "80:80"
+      - "8080:8080"  # Traefik dashboard
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    labels:
+      - "traefik.enable=true"
+    profiles:
+      - production

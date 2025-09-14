@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="100%" height="100%" fill="none"/>
+  <!-- Simple arch: semicircular top with pillars -->
+  <g fill="none" stroke="#1F2937" stroke-width="28" stroke-linecap="round" stroke-linejoin="round">
+    <!-- left pillar -->
+    <line x1="140" y1="380" x2="140" y2="220" />
+    <!-- right pillar -->
+    <line x1="372" y1="380" x2="372" y2="220" />
+    <!-- arch curve -->
+    <path d="M140 220 C140 120, 372 120, 372 220" />
+    <!-- base line -->
+    <line x1="110" y1="380" x2="402" y2="380" stroke-width="20" />
+  </g>
+</svg>

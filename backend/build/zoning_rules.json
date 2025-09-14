@@ -1,0 +1,29 @@
+[
+  {
+    "ZONING_DISTRICT":"R1-1",
+    "front":4.9,
+    "side":1.2,
+    "rear":10.7,
+    "max_height":11.5,
+    "FAR":0.7,
+    "coverage":0.5
+  },
+  {
+    "ZONING_DISTRICT":"RT-7",
+    "front":4.6,
+    "side":1.2,
+    "rear":10.7,
+    "max_height":10.7,
+    "FAR":0.7,
+    "coverage":0.45
+  },
+  {
+    "ZONING_DISTRICT":"RT-9",
+    "front":4.6,
+    "side":1.2,
+    "rear":10.7,
+    "max_height":10.7,
+    "FAR":0.7,
+    "coverage":0.45
+  }
+]

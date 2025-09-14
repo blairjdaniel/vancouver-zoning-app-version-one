@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  vancouver-zoning-app:
+    container_name: vancouver-zoning-app
+    # Use registry image if available, otherwise build locally
+    image: ${DOCKER_USERNAME:-local}/vancouver-zoning-app:${IMAGE_TAG:-latest}
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8081:80"
+    env_file:
+      - .env
+    environment:
+      - FLASK_ENV=production
+      - PYTHONPATH=/app
+    volumes:
+      # Mount local data directories for development
+      - ./files:/app/files:ro
+      - ./processed:/app/processed:ro
+      - ./configs:/app/configs:ro
+    restart: unless-stopped
+    labels:
+      - "com.docker.compose.project=vancouver-zoning-app"
+      - "description=Vancouver Zoning Analysis Application - Access at http://localhost:8081"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:80/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Optional: Private registry service for self-hosting
+  registry:
+    image: registry:2
+    container_name: docker-registry
+    ports:
+      - "5000:5000"
+    environment:
+      REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY: /data
+    volumes:
+      - registry-data:/data
+    restart: unless-stopped
+    profiles:
+      - registry
+
+volumes:
+  registry-data:

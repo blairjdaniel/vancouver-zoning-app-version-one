@@ -1,0 +1,403 @@
+[
+  {
+    "ZONING_DISTRICT": "R1-1",
+    "front": 4.9,
+    "side": 1.2,
+    "rear": 10.7,
+    "max_height": 11.5,
+    "FAR": 0.7,
+    "coverage": 0.5,
+    
+    "site_eligible": {
+      "min_frontage": 10.0,
+      "min_area": 306,
+      "min_depth": 30.4,
+      "access": "lane",
+      "heritage_designated": false,
+      "in_floodplain": false
+    },
+    
+    "bonus_FSR": {
+      "multiplex_rental": 1.00,
+      "below_market_unit": 1.00
+    },
+    
+    "parking": {
+      "max_surface_stalls": 2,
+      "min_rear_yard_setback": 0.9,
+      "under_overhang_allowed": true
+    },
+    
+    "site_config": {
+      "courtyard": {
+        "min_depth": 33.5,
+        "courtyard_width": 6.1,
+        "building_separation": {
+          "front_to_front": 3.0,
+          "rear_to_rear": 3.0,
+          "front_to_rear": 6.1
+        },
+        "fire_safety": {
+          "max_travel_distance": 45.0,
+          "description": "Maximum travel distance from street curb to unit entrance"
+        },
+        "building_arrangement": {
+          "front_building_larger": true,
+          "rear_building_smaller": true,
+          "front_depth_ratio": 0.45,
+          "rear_depth_ratio": 0.35
+        }
+      },
+      "max_building_depth": 19.8,
+      "max_building_width": 17.4,
+      "min_separation": 2.4
+    },
+    
+    "design": {
+      "max_story_height": 11.5,
+      "max_stairs_projection": 2.4,
+      "sunken_patio_max_projection": 3.1,
+      "sunken_patio_max_width": 4.6,
+      "entrance_travel_limit_m": 45.0
+    },
+    
+    "outdoor": {
+      "min_sqm_per_unit": 7.4,
+      "rooftop_decks_allowed": true,
+      "balcony_projection_max": 0.0,
+      "balcony_exception_PassiveHouse": 1.8
+    },
+    
+    "addressing": {
+      "require_front_visible_unit_numbers": true,
+      "unit_number_min_size": "100mm",
+      "unit_number_contrast": "high"
+    },
+    
+    "landscape": {
+      "tree_planting_count": 1,
+      "tree_setback_from_building": 1.5,
+      "tree_setback_from_property_line": 1.0,
+      "tree_minimum_size": "50mm_caliper",
+      "landscaping_coverage_min": 0.3
+    },
+    
+    "cardinal_directions": {
+      "north": {
+        "description": "North-facing orientation",
+        "solar_exposure": "limited",
+        "daylight_factor": "low"
+      },
+      "south": {
+        "description": "South-facing orientation", 
+        "solar_exposure": "optimal",
+        "daylight_factor": "high"
+      },
+      "east": {
+        "description": "East-facing orientation",
+        "solar_exposure": "morning",
+        "daylight_factor": "medium"
+      },
+      "west": {
+        "description": "West-facing orientation",
+        "solar_exposure": "afternoon",
+        "daylight_factor": "medium"
+      }
+    },
+    
+    "multiple_dwelling_conditions": {
+      "3_4_units": {
+        "min_site_area": 306,
+        "max_site_area": 463,
+        "min_frontage": 10.0,
+        "max_frontage": 13.3
+      },
+      "5_units": {
+        "min_site_area": 464,
+        "min_frontage": 13.4
+      },
+      "6_8_units": {
+        "min_site_area": 557,
+        "min_frontage": 15.1
+      },
+      "max_units_per_building": 8,
+      "max_total_units": 8
+    },
+    
+    "setback_requirements": {
+      "front_yard": {
+        "min_depth": 4.9,
+        "description": "Minimum front yard setback from property line to building"
+      },
+      "side_yard": {
+        "min_width": 1.2,
+        "narrow_lot_reduction": 1.0,
+        "description": "Minimum side yard setback, can be reduced for narrow lots"
+      },
+      "rear_yard": {
+        "min_depth": 10.7,
+        "courtyard_config": 0.9,
+        "description": "Minimum rear yard setback, reduced for courtyard configuration"
+      }
+    },
+    
+    "building_restrictions": {
+      "max_height": {
+        "principal_building": "11.5m and 3 storeys",
+        "rear_building": "8.5m and 2 storeys",
+        "partial_storey": "50% of storey below"
+      },
+      "max_depth": {
+        "building_depth": 19.8,
+        "corner_site_exception": "Director may increase"
+      },
+      "max_width": {
+        "building_width": 17.4
+      },
+      "max_units_per_building": 8,
+      "max_total_units": 8
+    },
+    
+    "floor_area_regulations": {
+      "max_FSR": {
+        "standard": 0.70,
+        "rental_units": 1.00,
+        "below_market_units": 1.00,
+        "character_house_addition": 0.85
+      },
+      "exclusions": {
+        "laneway_house": "excluded from FSR calculation",
+        "parking_floors": "excluded up to 48m2",
+        "balconies_decks": "excluded up to 12% of permitted floor area",
+        "entries_porches": "excluded up to 16% of permitted floor area"
+      }
+    },
+    
+    "site_coverage": {
+      "max_coverage": "50% of site area",
+      "max_impermeable": "75% of site area",
+      "parking_coverage": "30% maximum for parking areas"
+    },
+    
+    "outdoor_space_requirements": {
+      "min_area_per_unit": 7.4,
+      "types_allowed": ["balconies", "decks", "roof_decks", "patios"],
+      "description": "Minimum outdoor space per dwelling unit"
+    },
+    
+    "character_house_provisions": {
+      "retention_encouraged": true,
+      "infill_allowed": true,
+      "multiple_conversion": true,
+      "addition_FSR_bonus": 0.85
+    },
+    
+    "below_market_housing": {
+      "definition": {
+        "min_bedrooms": 2,
+        "min_floor_area": 90,
+        "price_reduction": "50% below fair market value"
+      },
+      "eligibility": "Income and other criteria as specified by BC Housing"
+    }
+  },
+  
+  {
+    "ZONING_DISTRICT": "RT-7",
+    "front": 4.6,
+    "side": 1.2,
+    "rear": 10.7,
+    "max_height": 10.7,
+    "FAR": 0.7,
+    "coverage": 0.45,
+    
+    "site_eligible": {
+      "min_frontage": 10.0,
+      "min_area": 306,
+      "min_depth": 30.4,
+      "access": "lane",
+      "heritage_designated": false,
+      "in_floodplain": false
+    },
+    
+    "bonus_FSR": {
+      "multiplex_rental": 1.00,
+      "below_market_unit": 1.00
+    },
+    
+    "parking": {
+      "max_surface_stalls": 2,
+      "min_rear_yard_setback": 0.9,
+      "under_overhang_allowed": true
+    },
+    
+    "site_config": {
+      "courtyard": {
+        "min_depth": 33.5,
+        "courtyard_width": 6.1,
+        "building_separation": {
+          "front_to_front": 3.0,
+          "rear_to_rear": 3.0,
+          "front_to_rear": 6.1
+        },
+        "fire_safety": {
+          "max_travel_distance": 45.0,
+          "description": "Maximum travel distance from street curb to unit entrance"
+        },
+        "building_arrangement": {
+          "front_building_larger": true,
+          "rear_building_smaller": true,
+          "front_depth_ratio": 0.45,
+          "rear_depth_ratio": 0.35
+        }
+      },
+      "max_building_depth": 19.8,
+      "max_building_width": 17.4,
+      "min_separation": 2.4
+    },
+    
+    "design": {
+      "max_story_height": 10.7,
+      "max_stairs_projection": 2.4,
+      "sunken_patio_max_projection": 3.1,
+      "sunken_patio_max_width": 4.6,
+      "entrance_travel_limit_m": 45.0
+    },
+    
+    "outdoor": {
+      "min_sqm_per_unit": 7.4,
+      "rooftop_decks_allowed": true,
+      "balcony_projection_max": 0.0,
+      "balcony_exception_PassiveHouse": 1.8
+    },
+    
+    "addressing": {
+      "require_front_visible_unit_numbers": true,
+      "unit_number_min_size": "100mm",
+      "unit_number_contrast": "high"
+    },
+    
+    "landscape": {
+      "tree_planting_count": 1,
+      "tree_setback_from_building": 1.5,
+      "tree_setback_from_property_line": 1.0,
+      "tree_minimum_size": "50mm_caliper",
+      "landscaping_coverage_min": 0.3
+    },
+    
+    "cardinal_directions": {
+      "north": {
+        "description": "North-facing orientation",
+        "solar_exposure": "limited",
+        "daylight_factor": "low"
+      },
+      "south": {
+        "description": "South-facing orientation", 
+        "solar_exposure": "optimal",
+        "daylight_factor": "high"
+      },
+      "east": {
+        "description": "East-facing orientation",
+        "solar_exposure": "morning",
+        "daylight_factor": "medium"
+      },
+      "west": {
+        "description": "West-facing orientation",
+        "solar_exposure": "afternoon",
+        "daylight_factor": "medium"
+      }
+    }
+  },
+  
+  {
+    "ZONING_DISTRICT": "RT-9",
+    "front": 4.6,
+    "side": 1.2,
+    "rear": 10.7,
+    "max_height": 10.7,
+    "FAR": 0.7,
+    "coverage": 0.45,
+    
+    "site_eligible": {
+      "min_frontage": 10.0,
+      "min_area": 306,
+      "min_depth": 30.4,
+      "access": "lane",
+      "heritage_designated": false,
+      "in_floodplain": false
+    },
+    
+    "bonus_FSR": {
+      "multiplex_rental": 1.00,
+      "below_market_unit": 1.00
+    },
+    
+    "parking": {
+      "max_surface_stalls": 2,
+      "min_rear_yard_setback": 0.9,
+      "under_overhang_allowed": true
+    },
+    
+    "site_config": {
+      "courtyard": {
+        "min_depth": 33.5,
+        "courtyard_width": 6.1
+      },
+      "max_building_depth": 19.8,
+      "max_building_width": 17.4,
+      "min_separation": 2.4
+    },
+    
+    "design": {
+      "max_story_height": 10.7,
+      "max_stairs_projection": 2.4,
+      "sunken_patio_max_projection": 3.1,
+      "sunken_patio_max_width": 4.6,
+      "entrance_travel_limit_m": 45.0
+    },
+    
+    "outdoor": {
+      "min_sqm_per_unit": 7.4,
+      "rooftop_decks_allowed": true,
+      "balcony_projection_max": 0.0,
+      "balcony_exception_PassiveHouse": 1.8
+    },
+    
+    "addressing": {
+      "require_front_visible_unit_numbers": true,
+      "unit_number_min_size": "100mm",
+      "unit_number_contrast": "high"
+    },
+    
+    "landscape": {
+      "tree_planting_count": 1,
+      "tree_setback_from_building": 1.5,
+      "tree_setback_from_property_line": 1.0,
+      "tree_minimum_size": "50mm_caliper",
+      "landscaping_coverage_min": 0.3
+    },
+    
+    "cardinal_directions": {
+      "north": {
+        "description": "North-facing orientation",
+        "solar_exposure": "limited",
+        "daylight_factor": "low"
+      },
+      "south": {
+        "description": "South-facing orientation", 
+        "solar_exposure": "optimal",
+        "daylight_factor": "high"
+      },
+      "east": {
+        "description": "East-facing orientation",
+        "solar_exposure": "morning",
+        "daylight_factor": "medium"
+      },
+      "west": {
+        "description": "West-facing orientation",
+        "solar_exposure": "afternoon",
+        "daylight_factor": "medium"
+      }
+    }
+  }
+] 

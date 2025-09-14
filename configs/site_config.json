@@ -1,0 +1,7 @@
+{
+    "site": "files/site_boundary.geojson",
+    "setbacks": { "front": 6, "side": 3, "rear": 6 },
+    "max_height": 18,
+    "FAR": 2.5,
+    "coverage": 0.5
+  }

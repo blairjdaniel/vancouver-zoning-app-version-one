@@ -1,0 +1,38 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+# Virtual environments
+venv/
+venv.bak/
+toad_venv/
+/.venv/
+
+# Build artifacts
+/build/
+/dist/
+/desktop_app.spec
+/build_icons/
+
+# Releases and archives
+/releases/
+*.tar.gz
+*.zip
+*.pkg
+
+# Node / frontend
+node_modules/
+frontend/build/
+
+# System files
+.DS_Store
+.AppleDouble
+Icon\r
+Thumbs.db
+
+# Env files and secrets
+*.env
+backend/.env
+/.env.*
+
+# Logs
+*.log

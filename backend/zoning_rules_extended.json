@@ -1,0 +1,244 @@
+[
+  {
+    "ZONING_DISTRICT": "R1-1",
+    "front": 4.9,
+    "side": 1.2,
+    "rear": 10.7,
+    "max_height": 11.5,
+    "FAR": 0.7,
+    "coverage": 0.5,
+    
+    "site_eligible": {
+      "min_frontage": 10.0,
+      "min_area": 306,
+      "min_depth": 30.4,
+      "access": "lane",
+      "heritage_designated": false,
+      "in_floodplain": false
+    },
+    
+    "bonus_FSR": {
+      "multiplex_rental": 1.00,
+      "below_market_unit": 1.00
+    },
+    
+    "parking": {
+      "max_surface_stalls": 2,
+      "min_rear_yard_setback": 0.9,
+      "under_overhang_allowed": true
+    },
+    
+    "site_config": {
+      "courtyard": {
+        "min_depth": 33.5,
+        "courtyard_width": 6.1
+      },
+      "max_building_depth": 19.8,
+      "max_building_width": 17.4,
+      "min_separation": 2.4
+    },
+    
+    "design": {
+      "max_story_height": 11.5,
+      "max_stairs_projection": 2.4,
+      "sunken_patio_max_projection": 3.1,
+      "sunken_patio_max_width": 4.6,
+      "entrance_travel_limit_m": 45.0
+    },
+    
+    "outdoor": {
+      "min_sqm_per_unit": 7.4,
+      "rooftop_decks_allowed": true,
+      "balcony_projection_max": 0.0,
+      "balcony_exception_PassiveHouse": 1.8
+    },
+    
+    "unit_requirements": {
+      "min_unit_size_sqm": 35.0,
+      "min_bedroom_size_sqm": 8.0,
+      "min_bathroom_size_sqm": 4.0,
+      "min_kitchen_size_sqm": 6.0,
+      "min_living_area_sqm": 15.0,
+      "max_units_per_building": 8,
+      "min_building_separation": 2.4,
+      "courtyard_min_units": 4,
+      "courtyard_max_units": 8
+    },
+    
+    "addressing": {
+      "require_front_visible_unit_numbers": true,
+      "unit_number_min_size": "100mm",
+      "unit_number_contrast": "high"
+    },
+    
+    "landscape": {
+      "tree_planting_count": 1,
+      "tree_setback_from_building": 1.5,
+      "tree_setback_from_property_line": 1.0,
+      "tree_minimum_size": "50mm_caliper",
+      "landscaping_coverage_min": 0.3
+    }
+  },
+  
+  {
+    "ZONING_DISTRICT": "RT-7",
+    "front": 4.6,
+    "side": 1.2,
+    "rear": 10.7,
+    "max_height": 10.7,
+    "FAR": 0.7,
+    "coverage": 0.45,
+    
+    "site_eligible": {
+      "min_frontage": 10.0,
+      "min_area": 306,
+      "min_depth": 30.4,
+      "access": "lane",
+      "heritage_designated": false,
+      "in_floodplain": false
+    },
+    
+    "bonus_FSR": {
+      "multiplex_rental": 1.00,
+      "below_market_unit": 1.00
+    },
+    
+    "parking": {
+      "max_surface_stalls": 2,
+      "min_rear_yard_setback": 0.9,
+      "under_overhang_allowed": true
+    },
+    
+    "site_config": {
+      "courtyard": {
+        "min_depth": 33.5,
+        "courtyard_width": 6.1
+      },
+      "max_building_depth": 19.8,
+      "max_building_width": 17.4,
+      "min_separation": 2.4
+    },
+    
+    "design": {
+      "max_story_height": 10.7,
+      "max_stairs_projection": 2.4,
+      "sunken_patio_max_projection": 3.1,
+      "sunken_patio_max_width": 4.6,
+      "entrance_travel_limit_m": 45.0
+    },
+    
+    "outdoor": {
+      "min_sqm_per_unit": 7.4,
+      "rooftop_decks_allowed": true,
+      "balcony_projection_max": 0.0,
+      "balcony_exception_PassiveHouse": 1.8
+    },
+    
+    "unit_requirements": {
+      "min_unit_size_sqm": 35.0,
+      "min_bedroom_size_sqm": 8.0,
+      "min_bathroom_size_sqm": 4.0,
+      "min_kitchen_size_sqm": 6.0,
+      "min_living_area_sqm": 15.0,
+      "max_units_per_building": 8,
+      "min_building_separation": 2.4,
+      "courtyard_min_units": 4,
+      "courtyard_max_units": 8
+    },
+    
+    "addressing": {
+      "require_front_visible_unit_numbers": true,
+      "unit_number_min_size": "100mm",
+      "unit_number_contrast": "high"
+    },
+    
+    "landscape": {
+      "tree_planting_count": 1,
+      "tree_setback_from_building": 1.5,
+      "tree_setback_from_property_line": 1.0,
+      "tree_minimum_size": "50mm_caliper",
+      "landscaping_coverage_min": 0.3
+    }
+  },
+  
+  {
+    "ZONING_DISTRICT": "RT-9",
+    "front": 4.6,
+    "side": 1.2,
+    "rear": 10.7,
+    "max_height": 10.7,
+    "FAR": 0.7,
+    "coverage": 0.45,
+    
+    "site_eligible": {
+      "min_frontage": 10.0,
+      "min_area": 306,
+      "min_depth": 30.4,
+      "access": "lane",
+      "heritage_designated": false,
+      "in_floodplain": false
+    },
+    
+    "bonus_FSR": {
+      "multiplex_rental": 1.00,
+      "below_market_unit": 1.00
+    },
+    
+    "parking": {
+      "max_surface_stalls": 2,
+      "min_rear_yard_setback": 0.9,
+      "under_overhang_allowed": true
+    },
+    
+    "site_config": {
+      "courtyard": {
+        "min_depth": 33.5,
+        "courtyard_width": 6.1
+      },
+      "max_building_depth": 19.8,
+      "max_building_width": 17.4,
+      "min_separation": 2.4
+    },
+    
+    "design": {
+      "max_story_height": 10.7,
+      "max_stairs_projection": 2.4,
+      "sunken_patio_max_projection": 3.1,
+      "sunken_patio_max_width": 4.6,
+      "entrance_travel_limit_m": 45.0
+    },
+    
+    "outdoor": {
+      "min_sqm_per_unit": 7.4,
+      "rooftop_decks_allowed": true,
+      "balcony_projection_max": 0.0,
+      "balcony_exception_PassiveHouse": 1.8
+    },
+    
+    "unit_requirements": {
+      "min_unit_size_sqm": 35.0,
+      "min_bedroom_size_sqm": 8.0,
+      "min_bathroom_size_sqm": 4.0,
+      "min_kitchen_size_sqm": 6.0,
+      "min_living_area_sqm": 15.0,
+      "max_units_per_building": 8,
+      "min_building_separation": 2.4,
+      "courtyard_min_units": 4,
+      "courtyard_max_units": 8
+    },
+    
+    "addressing": {
+      "require_front_visible_unit_numbers": true,
+      "unit_number_min_size": "100mm",
+      "unit_number_contrast": "high"
+    },
+    
+    "landscape": {
+      "tree_planting_count": 1,
+      "tree_setback_from_building": 1.5,
+      "tree_setback_from_property_line": 1.0,
+      "tree_minimum_size": "50mm_caliper",
+      "landscaping_coverage_min": 0.3
+    }
+  }
+] 
