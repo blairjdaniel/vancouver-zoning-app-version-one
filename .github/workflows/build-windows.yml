@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-windows:
-    runs-on: windows-latest
+    runs-on: windows-2025
     steps:
       - uses: actions/checkout@v4
 
@@ -23,7 +23,7 @@ jobs:
 
       - name: Build Windows onefile
         run: |
-          pyinstaller --noconfirm --onefile --add-data "backend\\build;build" --add-data "backend\\models;models" --icon build_icons/Arch.ico backend\\desktop_app.py
+          pyinstaller --noconfirm --onefile --add-data "backend\\build;build" --add-data "backend\\models;models" backend\\desktop_app.py
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
