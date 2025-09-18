@@ -28,15 +28,35 @@ Write-Host "Running PyInstaller... (OneDir=$OneDir)"
 $modeArg = if ($OneDir) { '--onedir' } else { '--onefile' }
 
 # Ensure add-data paths are correct for Windows builds (source;dest)
-$addDataArgs = '--add-data','backend\\build;build','--add-data','backend\\models;models'
-
+$addDataArgs = @('--add-data','backend\\build;build','--add-data','backend\\models;models')
 
 # Ensure PyInstaller writes output to the requested OutDir and uses a dedicated work path
 $workPath = Join-Path -Path $OutDir -ChildPath 'build'
 $distPath = $OutDir
 
-$args = @('-m','PyInstaller','--noconfirm',$modeArg,'--distpath',$distPath,'--workpath',$workPath) + $hiddenImports | ForEach-Object { @('--hidden-import', $_) } + $addDataArgs + @('--icon','build_icons/Arch.ico','backend\\desktop_app.py')
+# Build the argument array correctly and include hidden-imports
+$args = @('-m','PyInstaller','--noconfirm',$modeArg,'--distpath',$distPath,'--workpath',$workPath)
+foreach ($hi in $hiddenImports) {
+    $args += '--hidden-import'
+    $args += $hi
+}
+$args += $addDataArgs
+$args += @('--icon','build_icons/Arch.ico','backend\\desktop_app.py')
 
-Start-Process -NoNewWindow -FilePath $PythonExe -ArgumentList $args -Wait
+Write-Host "PyInstaller command: $PythonExe $($args -join ' ')"
+
+# Ensure output directories exist so PyInstaller can write into them
+if (-not (Test-Path -Path $OutDir)) {
+    Write-Host "Creating output directory: $OutDir"
+    New-Item -ItemType Directory -Path $OutDir -Force | Out-Null
+}
+
+# Call Python directly so stdout/stderr show in CI logs and we can return the real exit code
+& $PythonExe @args
+$rc = $LASTEXITCODE
+if ($rc -ne 0) {
+    Write-Host "PyInstaller failed with exit code $rc"
+    exit $rc
+}
 
 Write-Host "Build finished. If OneDir was used the output folder is: $OutDir\\desktop_app; if OneFile was used the artifact is: $OutDir\\desktop_app.exe"

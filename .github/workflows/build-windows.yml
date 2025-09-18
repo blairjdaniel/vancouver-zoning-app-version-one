@@ -29,8 +29,8 @@ jobs:
 
       - name: Show dist contents (for debugging upload path)
         run: |
-          echo "Listing dist contents"
-          dir dist
+          echo "Listing dist contents (if present)"
+          if (Test-Path dist) { dir dist } else { echo "dist folder not present" }
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
