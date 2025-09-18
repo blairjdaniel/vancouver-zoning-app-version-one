@@ -38,13 +38,9 @@ $distPath = $OutDir
 if (Test-Path .\desktop_app.spec) {
     Write-Host "desktop_app.spec found; using spec build (clean)"
     $args = @('-m','PyInstaller','--noconfirm','--clean','--distpath',$distPath,'--workpath',$workPath)
-    # Add hidden imports if any are missing at analysis time
-    foreach ($hi in $hiddenImports) {
-        $args += '--hidden-import'
-        $args += $hi
-    }
-    # Finally pass the spec file as the last argument
-    $args += '.\desktop_app.spec'
+    # When using a .spec file, hidden-imports should be declared in the spec itself.
+    # Don't append --hidden-import flags here because PyInstaller rejects them for spec builds.
+    $args += '.\\desktop_app.spec'
 } else {
     $args = @('-m','PyInstaller','--noconfirm',$modeArg,'--distpath',$distPath,'--workpath',$workPath)
     foreach ($hi in $hiddenImports) {
