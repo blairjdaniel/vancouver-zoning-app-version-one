@@ -35,7 +35,12 @@ $workPath = Join-Path -Path $OutDir -ChildPath 'build'
 $distPath = $OutDir
 
 # Build the argument array correctly and include hidden-imports
-$args = @('-m','PyInstaller','--noconfirm',$modeArg,'--distpath',$distPath,'--workpath',$workPath)
+if (Test-Path .\desktop_app.spec) {
+    Write-Host "desktop_app.spec found; using spec build (clean)"
+    $args = @('-m','PyInstaller','--noconfirm','--clean','--distpath',$distPath,'--workpath',$workPath,'.\desktop_app.spec')
+} else {
+    $args = @('-m','PyInstaller','--noconfirm',$modeArg,'--distpath',$distPath,'--workpath',$workPath)
+}
 foreach ($hi in $hiddenImports) {
     $args += '--hidden-import'
     $args += $hi
