@@ -27,13 +27,13 @@ jobs:
           # prefer using --OneDir by setting the OneDir switch below (comment/uncomment as needed).
           pwsh -File .\scripts\build_windows.ps1 -PythonExe python -OutDir dist
 
-      # Optional debug-friendly build (uncomment to run instead):
-      # - name: Build Windows (onedir for debugging)
-      #   run: |
-      #     pwsh -File .\scripts\build_windows.ps1 -PythonExe python -OutDir dist -OneDir
+      - name: Show dist contents (for debugging upload path)
+        run: |
+          echo "Listing dist contents"
+          dir dist
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: windows-desktop-app
-          path: dist\desktop_app.exe
+          path: dist/**

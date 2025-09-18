@@ -30,7 +30,12 @@ $modeArg = if ($OneDir) { '--onedir' } else { '--onefile' }
 # Ensure add-data paths are correct for Windows builds (source;dest)
 $addDataArgs = '--add-data','backend\\build;build','--add-data','backend\\models;models'
 
-$args = @('-m','PyInstaller','--noconfirm',$modeArg) + $hiddenImports | ForEach-Object { @('--hidden-import', $_) } + $addDataArgs + @('--icon','build_icons/Arch.ico','backend\\desktop_app.py')
+
+# Ensure PyInstaller writes output to the requested OutDir and uses a dedicated work path
+$workPath = Join-Path -Path $OutDir -ChildPath 'build'
+$distPath = $OutDir
+
+$args = @('-m','PyInstaller','--noconfirm',$modeArg,'--distpath',$distPath,'--workpath',$workPath) + $hiddenImports | ForEach-Object { @('--hidden-import', $_) } + $addDataArgs + @('--icon','build_icons/Arch.ico','backend\\desktop_app.py')
 
 Start-Process -NoNewWindow -FilePath $PythonExe -ArgumentList $args -Wait
 
